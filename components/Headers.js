@@ -24,13 +24,13 @@ export default function Example() {
       >
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
-            <span className="sr-only">Your Company</span>
+            <span className="sr-only">Planet Khan Multimedia</span>
             <Image
-              src={require("../components/assets/images/logo.png")}
+              src={require("../components/assets/images/fulllogo.png")}
               alt="Planet Khan's Logo"
-              className="w-[40px]"
-              width={30}
-              height={30}
+              className="w-[200px]"
+              width={100}
+              height={100}
             />
           </a>
         </div>
@@ -67,11 +67,13 @@ export default function Example() {
         <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
-              <img
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                alt=""
+              <span className="sr-only">Planet Khan Multimedia</span>
+              <Image
+                src={require("../components/assets/images/logo.png")}
+                alt="Planet Khan's Logo"
+                className="w-[40px]"
+                width={30}
+                height={30}
               />
             </a>
             <button
