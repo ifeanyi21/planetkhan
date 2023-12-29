@@ -1,118 +1,132 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import Header from "@/components/Headers";
+import Link from "next/link";
+import {
+  LockClosedIcon,
+  StarIcon,
+  ChartBarIcon,
+  MapIcon,
+} from "@heroicons/react/20/solid";
+import Banner from "../components/assets/images/camera.jpg";
+import Image from "next/image";
+import Footer from "@/components/Footer";
 
-const inter = Inter({ subsets: ['latin'] })
+const features = [
+  {
+    name: "Timelessness of Quality:",
+    description:
+      "Planet Kan Multimedia stands at the forefront of delivering designs and marketing solutions that transcend trends. Our commitment to timelessness ensures that every project reflects enduring quality, making a lasting impact on the audience.",
+    icon: StarIcon,
+  },
+  {
+    name: "Reliability:",
+    description:
+      "Clients can depend on Planet Kan Multimedia for consistent, dependable, and professional services. Our team prides itself on meeting deadlines, exceeding expectations, and maintaining open communication throughout the creative process.",
+    icon: LockClosedIcon,
+  },
+  {
+    name: "World-Class Creativity:",
+    description:
+      "With a team of seasoned professionals, Planet Kan Multimedia is dedicated to pushing the boundaries of creativity. We bring global standards to every project, ensuring that our clients receive world-class designs and marketing strategies that set them apart.",
+    icon: MapIcon,
+  },
+  {
+    name: "Value for Investment:",
+    description:
+      "We understand the importance of a return on investment. Planet Kan Multimedia strives to provide exceptional value for every client's budget, offering cost-effective solutions without compromising on quality. Our goal is to not just meet expectations but to exceed them, ensuring every investment yields significant returns.",
+    icon: ChartBarIcon,
+  },
+];
 
 export default function Home() {
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">pages/index.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className="bg-brand-black">
+      <Header />
+      <main>
+        <div className="relative isolate px-6 pt-14 lg:px-8">
+          <div className="mx-auto max-w-3xl py-32 sm:py-48 lg:py-56">
+            <div className="text-center relative">
+              <h1 className="text-4xl font-bold tracking-tight text-white sm:text-7xl">
+                Planet Kan{" "}
+                <span className="animate-pulse text-brand-gold">
+                  Multimedia
+                </span>
+              </h1>
+              <div className="absolute right-[76px]">
+                <svg
+                  className="md:w-[220px] md:h-[24px] w-[180px] h-[10px]"
+                  viewBox="0 0 220 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M134.66 13.107c-10.334-.37-20.721-.5-31.12-.291l-2.6.06c-4.116.04-8.193.602-12.3.749-14.502.43-29.029 1.196-43.514 2.465-6.414.63-12.808 1.629-19.04 2.866-7.93 1.579-16.113 3.71-23.367 5.003-2.211.374-3.397-1.832-2.31-4.906.5-1.467 1.838-3.456 3.418-4.813a16.047 16.047 0 0 1 6.107-3.365c16.88-4.266 33.763-6.67 51.009-7.389C71.25 3.187 81.81 1.6 92.309.966c11.53-.65 23.097-.938 34.66-.96 7.117-.054 14.25.254 21.36.318l16.194.803 4.62.39c3.85.32 7.693.618 11.53.813 8.346.883 16.673.802 25.144 2.159 1.864.276 3.714.338 5.566.873l.717.225c6.162 1.977 7.92 3.64 7.9 7.197l-.003.203c-.017.875.05 1.772-.112 2.593-.581 2.762-4.066 4.12-8.637 3.63-13.696-1.06-27.935-3.332-42.97-4.168-11.055-.83-22.314-1.459-33.596-1.603l-.022-.332Z"
+                    fill="#E07C0F"
+                    fillRule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <p className="mt-12 text-2xl leading-8 text-brand-gold">
+                Where Dreams Live.
+              </p>
+              <div className="mt-10 flex items-center justify-center gap-x-6">
+                <div className="hidden sm:mb-8 sm:flex sm:justify-center">
+                  <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-brand-orange ring-1 glow ring-brand-orange hover:ring-gray-900/20">
+                    <Link href="/about" className="font-semibold">
+                      <span className="absolute inset-0" aria-hidden="true" />
+                      Get Started <span aria-hidden="true">&rarr;</span>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+        <div className="overflow-hidden bg-white py-24 sm:py-32">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+              <div className="lg:pr-8 lg:pt-4">
+                <div className="lg:max-w-lg">
+                  <h2 className="text-base font-semibold leading-7 text-brand-orange">
+                    Planet Khan Multimedia
+                  </h2>
+                  <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                    Brand Values
+                  </p>
+                  <p className="mt-6 text-lg leading-8 text-gray-600">
+                    Planet Kan Multimedia is a dynamic and innovative multimedia
+                    agency dedicated to providing top-tier design and marketing
+                    solutions. With a commitment to excellence, the brand is
+                    synonymous with timeless quality, reliability, world-class
+                    creativity, and unbeatable value for investment.
+                  </p>
+                  <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
+                    {features.map((feature) => (
+                      <div key={feature.name} className="relative pl-9">
+                        <dt className="inline font-semibold text-gray-900">
+                          <feature.icon
+                            className="absolute left-1 top-1 h-5 w-5 text-brand-orange"
+                            aria-hidden="true"
+                          />
+                          {feature.name}
+                        </dt>{" "}
+                        <dd className="inline">{feature.description}</dd>
+                      </div>
+                    ))}
+                  </dl>
+                </div>
+              </div>
+              <Image
+                src={Banner}
+                alt="Product screenshot"
+                className="w-[48rem] h-[1100px] object-cover max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
+                width={2432}
+                height={400}
+              />
+            </div>
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </div>
+  );
 }

@@ -2,26 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@import url(https://db.onlinewebfonts.com/c/6a0482275e06b01d85575eb3b9894566?family=Palatino+Linotype+W02);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 body {
-  color: rgb(var(--foreground-rgb));
+  font-family: "Palatino Linotype W02";
+}
+
+.glow:hover {
+  -webkit-box-shadow: 0px 0px 30px 0px rgba(224, 124, 15, 0.65);
+  -moz-box-shadow: 0px 0px 30px 0px rgba(224, 124, 15, 0.65);
+  box-shadow: 0px 0px 30px 0px rgba(224, 124, 15, 0.65);
+}
+
+.overlay {
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      37deg,
+      rgba(190, 147, 85, 0.7),
+      rgba(139, 99, 51, 0.3)
+    ),
+    url("../components/assets/images/about1.jpg");
+  /* background-image: ; */
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 350px;
+}
+
+a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+.cardGlass {
+  background: rgba(224, 124, 15, 0.07);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(0.3px);
+  -webkit-backdrop-filter: blur(0.3px);
+  border: 1px solid rgba(224, 124, 15, 1);
+  min-height: 230px;
+  text-align: left;
 }
