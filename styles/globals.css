@@ -22,7 +22,7 @@ body {
       rgba(190, 147, 85, 0.7),
       rgba(139, 99, 51, 0.3)
     ),
-    url("../components/assets/images/about1.jpg");
+    url("../components/assets/images/about.webp");
   /* background-image: ; */
   background-size: cover;
   background-repeat: no-repeat;
