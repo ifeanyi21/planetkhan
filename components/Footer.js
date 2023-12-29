@@ -25,10 +25,7 @@ const Footer = () => {
             various mediums.
           </div>
           <Link href="/about" className="font-semibold !text-gray-300">
-            <span
-              className="absolute inset-0 !text-gray-300"
-              aria-hidden="true"
-            />
+            <span className="!text-gray-300" aria-hidden="true" />
             Read More <span aria-hidden="true">&rarr;</span>
           </Link>
         </div>

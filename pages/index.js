@@ -45,7 +45,7 @@ export default function Home() {
         <div className="relative isolate px-6 pt-14 lg:px-8">
           <div className="mx-auto max-w-3xl py-32 sm:py-48 lg:py-56">
             <div className="text-center relative">
-              <h1 className="text-4xl font-bold tracking-tight text-white sm:text-7xl">
+              <h1 className="text-3xl font-bold tracking-tight text-white sm:text-7xl">
                 Planet Kan{" "}
                 <span className="animate-pulse text-brand-gold">
                   Multimedia
@@ -65,14 +65,14 @@ export default function Home() {
                 </svg>
               </div>
 
-              <p className="mt-12 text-2xl leading-8 text-brand-gold">
+              <p className="my-4 md:my-8 md:text-2xl text-base leading-8 text-brand-gold">
                 Where Dreams Live.
               </p>
-              <div className="mt-10 flex items-center justify-center gap-x-6">
-                <div className="hidden sm:mb-8 sm:flex sm:justify-center">
+              <div className="flex items-center justify-center gap-x-6">
+                <div className="sm:mb-8 sm:flex sm:justify-center">
                   <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-brand-orange ring-1 glow ring-brand-orange hover:ring-gray-900/20">
                     <Link href="/about" className="font-semibold">
-                      <span className="absolute inset-0" aria-hidden="true" />
+                      <span aria-hidden="true" />
                       Get Started <span aria-hidden="true">&rarr;</span>
                     </Link>
                   </div>
@@ -118,7 +118,7 @@ export default function Home() {
               <Image
                 src={Banner}
                 alt="Product screenshot"
-                className="w-[48rem] h-[1100px] object-cover max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
+                className="md:block hidden w-[48rem] h-[1100px] object-cover max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
                 width={2432}
                 height={400}
               />

@@ -140,7 +140,7 @@ const About = () => {
               </div>
               <div className="row text-left mb-8 pb-16 text-sm">
                 <div className="col-lg-3">
-                  <Card className="mb-2 !bg-brand-gold w-full min-h-[280px] text-brand-black">
+                  <Card className="mb-2 !bg-brand-gold w-full md:min-h-[280px] text-brand-black">
                     <Card.Body>
                       <Card.Text>
                         At Planet Kan, our vision is to redefine the landscape
@@ -155,7 +155,7 @@ const About = () => {
                   </Card>
                 </div>
                 <div className="col-lg-3">
-                  <Card className="mb-2 !bg-brand-gold w-full min-h-[280px] text-brand-black">
+                  <Card className="mb-2 !bg-brand-gold w-full md:min-h-[280px] text-brand-black">
                     <Card.Body>
                       <Card.Text>
                         Our commitment lies in pushing the boundaries of what's
@@ -169,7 +169,7 @@ const About = () => {
                   </Card>
                 </div>
                 <div className="col-lg-3">
-                  <Card className="mb-2 !bg-brand-gold w-full min-h-[280px] text-brand-black">
+                  <Card className="mb-2 !bg-brand-gold w-full md:min-h-[280px] text-brand-black">
                     <Card.Body>
                       <Card.Text>
                         Through our dedication to craftsmanship, creativity, and
@@ -184,7 +184,7 @@ const About = () => {
                   </Card>
                 </div>
                 <div className="col-lg-3">
-                  <Card className="mb-2 !bg-brand-gold w-full min-h-[280px] text-brand-black">
+                  <Card className="mb-2 !bg-brand-gold w-full md:min-h-[280px] text-brand-black">
                     <Card.Body>
                       <Card.Text>
                         At Planet Kan, we strive to be the driving force behind
@@ -200,7 +200,7 @@ const About = () => {
               </div>
             </div>
           </div>
-          <div className="bg-white mt-8 py-16">
+          <div className="bg-white mt-8 py-16 w-full overflow-hidden">
             <div className="md:text-xl container text-base font-semibold mb-16 text-brand-black mt-8">
               Trusted by the world’s most innovative teams
             </div>
