@@ -15,7 +15,7 @@ const About = () => {
             Who we are
           </h1>
         </div>
-        <div className="mt-8 text-gray-300 font-medium text-lg md:text-center text-left">
+        <div className="mt-8 text-gray-300 font-medium text-lg md:text-center text-left puff-in-hor">
           <div className="container">
             <div className="my-16 text-center">
               At{" "}

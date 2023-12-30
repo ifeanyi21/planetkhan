@@ -38,6 +38,8 @@ const features = [
 ];
 
 export default function Home() {
+  // const { ref, inView } = useInView();
+
   return (
     <div className="bg-brand-black">
       <Header />
@@ -45,7 +47,7 @@ export default function Home() {
         <div className="relative isolate px-6 pt-14 lg:px-8">
           <div className="mx-auto max-w-3xl py-32 sm:py-48 lg:py-56">
             <div className="text-center relative">
-              <h1 className="text-3xl font-bold tracking-tight text-white sm:text-7xl">
+              <h1 className="text-3xl font-bold tracking-tight text-white sm:text-7xl slide-in-left">
                 Planet Kan{" "}
                 <span className="animate-pulse text-brand-gold">
                   Multimedia
@@ -65,10 +67,10 @@ export default function Home() {
                 </svg>
               </div>
 
-              <p className="my-4 md:my-8 md:text-2xl text-base leading-8 text-brand-gold">
+              <p className="my-7 md:my-8 md:text-xl text-base leading-8 text-white slide-in-right">
                 Where Dreams Live.
               </p>
-              <div className="flex items-center justify-center gap-x-6">
+              <div className="flex items-center justify-center gap-x-6 slide-in-left">
                 <div className="sm:mb-8 sm:flex sm:justify-center">
                   <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-brand-orange ring-1 glow ring-brand-orange hover:ring-gray-900/20">
                     <Link href="/about" className="font-semibold">
@@ -84,7 +86,7 @@ export default function Home() {
         <div className="overflow-hidden bg-white py-24 sm:py-32">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-              <div className="lg:pr-8 lg:pt-4">
+              <div className={`lg:pr-8 lg:pt-4`}>
                 <div className="lg:max-w-lg">
                   <h2 className="text-base font-semibold leading-7 text-brand-orange">
                     Planet Khan Multimedia

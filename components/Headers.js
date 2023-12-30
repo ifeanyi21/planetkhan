@@ -8,8 +8,8 @@ import { useRouter } from "next/router";
 const navigation = [
   { name: "Home", href: "/" },
   { name: "About us", href: "/about" },
-  { name: "Media", href: "#" },
-  { name: "Contact", href: "#" },
+  { name: "Media", href: "/media" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export default function Example() {
