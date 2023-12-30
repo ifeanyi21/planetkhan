@@ -47,7 +47,7 @@ export default function ProfileTabs() {
   return (
     <div className="bg-brand-black">
       <Header />
-      <main>
+      <main className="overflow-hidden">
         <div className="relative w-full mediaoverlay glow shadow-lg puff-in-hor">
           <h1 className="absolute md:text-5xl text-2xl font-bold top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white">
             Our Portfolio

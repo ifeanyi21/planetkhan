@@ -43,11 +43,11 @@ export default function Home() {
   return (
     <div className="bg-brand-black">
       <Header />
-      <main>
+      <main className="overflow-hidden">
         <div className="relative isolate px-6 pt-14 lg:px-8">
           <div className="mx-auto max-w-3xl py-32 sm:py-48 lg:py-56">
             <div className="text-center relative">
-              <h1 className="text-3xl font-bold tracking-tight text-white sm:text-7xl slide-in-left">
+              <h1 className="text-3xl font-bold tracking-tight text-white sm:text-7xl puff-in-hor">
                 Planet Kan{" "}
                 <span className="animate-pulse text-brand-gold">
                   Multimedia

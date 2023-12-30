@@ -9,13 +9,13 @@ const About = () => {
   return (
     <div className="bg-brand-black">
       <Header />
-      <main>
+      <main className="overflow-hidden">
         <div className="relative w-full overlay glow shadow-lg">
           <h1 className="absolute md:text-5xl text-2xl font-bold top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white">
             Who we are
           </h1>
         </div>
-        <div className="mt-8 text-gray-300 font-medium text-lg md:text-center text-left puff-in-hor">
+        <div className="mt-8 text-gray-300 font-medium text-lg md:text-center text-left slide-in-bottom">
           <div className="container">
             <div className="my-16 text-center">
               At{" "}
