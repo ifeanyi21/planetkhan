@@ -9,6 +9,8 @@ import {
 import Banner from "../components/assets/images/camera.jpg";
 import Image from "next/image";
 import Footer from "@/components/Footer";
+import { Montserrat } from "next/font/google";
+import { useInView } from "react-intersection-observer";
 
 const features = [
   {
@@ -37,17 +39,24 @@ const features = [
   },
 ];
 
+const montserrat = Montserrat({
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  subsets: ["latin"],
+});
+
 export default function Home() {
-  // const { ref, inView } = useInView();
+  const { ref, inView } = useInView({
+    threshold: 0.2,
+  });
 
   return (
-    <div className="bg-brand-black">
+    <div className={`bg-brand-black ${montserrat.className}`}>
       <Header />
       <main className="overflow-hidden">
         <div className="relative isolate px-6 pt-14 lg:px-8">
           <div className="mx-auto max-w-3xl py-32 sm:py-48 lg:py-56">
             <div className="text-center relative">
-              <h1 className="text-3xl font-bold tracking-tight text-white sm:text-7xl puff-in-hor">
+              <h1 className="text-3xl font-bold tracking-tight text-white sm:text-6xl puff-in-hor">
                 Planet Kan{" "}
                 <span className="animate-pulse text-brand-gold">
                   Multimedia
@@ -83,10 +92,14 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="overflow-hidden bg-white py-24 sm:py-32">
+        <div ref={ref} className="overflow-hidden bg-white py-24 sm:py-32">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-              <div className={`lg:pr-8 lg:pt-4`}>
+              <div
+                className={`lg:pr-8 lg:pt-4 ${
+                  inView ? "slide-in-bottom opacity-100" : "opacity-0"
+                }`}
+              >
                 <div className="lg:max-w-lg">
                   <h2 className="text-base font-semibold leading-7 text-brand-orange">
                     Planet Khan Multimedia
@@ -118,9 +131,12 @@ export default function Home() {
                 </div>
               </div>
               <Image
+                ref={ref}
                 src={Banner}
                 alt="Product screenshot"
-                className="md:block hidden w-[48rem] h-[1100px] object-cover max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
+                className={`md:block hidden w-[48rem] h-[1100px] object-cover max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0 ${
+                  inView ? "slide-in-right opacity-100" : "opacity-0"
+                }`}
                 width={2432}
                 height={400}
               />

@@ -46,26 +46,33 @@ const SubTabs = ({ events, potraits, documentaries }) => {
         value={value}
         TabIndicatorProps={{
           style: {
-            backgroundColor: "white",
-            color: "white !important",
+            backgroundColor: "#BE9354",
           },
         }}
         variant={size.width > 768 ? "fullWidth" : "scrollable"}
         onChange={handleChange}
       >
-        <Tab value={0} label="Events" className="!text-white md:!text-base" />
-        <Tab value={1} label="Potraits" className="!text-white md:!text-base" />
+        <Tab
+          value={0}
+          label="Events"
+          className="!text-brand-gold md:!text-base"
+        />
+        <Tab
+          value={1}
+          label="Potraits"
+          className="!text-brand-gold md:!text-base"
+        />
         <Tab
           value={2}
           label="Documentaries"
-          className="!text-white md:!text-base"
+          className="!text-brand-gold md:!text-base"
         />
       </Tabs>
       <CustomTabPanel value={value} index={0}>
         <div className="row">
           {events.map((item) => {
             return (
-              <div className="col-md-4 mb-8" key={item.id}>
+              <div className="col-md-4 mb-8 cursor-pointer" key={item.id}>
                 <Image
                   src={item.image}
                   className="rounded-sm w-full h-[300px] object-cover"

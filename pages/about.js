@@ -4,10 +4,18 @@ import Carousels from "@/components/Carousels";
 import { Card } from "react-bootstrap";
 import Brands from "@/components/Brands";
 import Footer from "@/components/Footer";
+import { Montserrat } from "next/font/google";
+// import ReactPlayer from "react-player";
+// import Video from "../components/assets/animations/Animation1.webm";
+// import * as LottiePlayer from "@lottiefiles/lottie-player";
 
+const montserrat = Montserrat({
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  subsets: ["latin"],
+});
 const About = () => {
   return (
-    <div className="bg-brand-black">
+    <div className={`bg-brand-black ${montserrat.className}`}>
       <Header />
       <main className="overflow-hidden">
         <div className="relative w-full overlay glow shadow-lg">
@@ -17,21 +25,44 @@ const About = () => {
         </div>
         <div className="mt-8 text-gray-300 font-medium text-lg md:text-center text-left slide-in-bottom">
           <div className="container">
-            <div className="my-16 text-center">
-              At{" "}
-              <span className="text-brand-orange font-bold">
+            <div className="row">
+              <div className="col-md-6 mb-3">
+                {/* <lottie-player
+                  autoplay
+                  controls
+                  loop
+                  mode="normal"
+                  src="https://assets3.lottiefiles.com/packages/lf20_UJNc2t.json"
+                  style="width: 320px"
+                ></lottie-player> */}
+                {/* <ReactPlayer
+                  url={Video}
+                  controls={false}
+                  width={500}
+                  height={500}
+                />
+                <source src={Video} type="video/webm" /> */}
+              </div>
+              <div className="col-md-6 mb-3">
                 {" "}
-                Planet Khan Multimedia
-              </span>
-              , we're passionate about the boundless possibilities that
-              multimedia offers. We specialize in harnessing the power of
-              technology, design, and storytelling to create immersive,
-              impactful experiences that captivate audiences across various
-              mediums.
+                <div className="my-16 text-center text-base">
+                  At{" "}
+                  <span className="text-brand-orange font-bold">
+                    {" "}
+                    Planet Khan Multimedia
+                  </span>
+                  , we're passionate about the boundless possibilities that
+                  multimedia offers. We specialize in harnessing the power of
+                  technology, design, and storytelling to create immersive,
+                  impactful experiences that captivate audiences across various
+                  mediums.
+                </div>
+              </div>
             </div>
-            <div className="text-3xl font-semibold mb-3 text-brand-orange">
+
+            <h4 className="text-3xl font-semibold mb-8 text-brand-orange">
               Our Story
-            </div>
+            </h4>
             <div className="mb-8 border-b border-brand-gold pb-10">
               Since our inception,{" "}
               <span className="text-brand-orange font-bold">
@@ -47,11 +78,11 @@ const About = () => {
             </div>
           </div>
 
-          <div className="bg-white py-10">
+          <div className="bg-white py-20">
             <div className="container">
-              <div className="text-3xl font-bold mb-3 text-black">
+              <h4 className="text-3xl font-bold mb-8 text-brand-black">
                 What we Do
-              </div>
+              </h4>
               <div className="row">
                 <div className="col-md-4 p-2 mb-4">
                   <div className="cardGlass p-3 text-gray-900">
@@ -94,10 +125,10 @@ const About = () => {
           <div className="container">
             <div className="row py-24">
               <div className="col-md-6 mb-4">
-                <div className="text-xl font-semibold mt-8 mb-3 text-brand-orange">
+                <h3 className="text-3xl font-semibold mt-8 mb-3 text-brand-orange">
                   Our Approach
-                </div>
-                <div className="my-8 pb-10 text-lg">
+                </h3>
+                <div className="my-8 pb-10 text-base">
                   At{" "}
                   <span className="text-brand-orange font-bold">
                     {" "}
@@ -112,18 +143,14 @@ const About = () => {
                 </div>
               </div>
               <div className="col-md-6 mb-4">
-                <div className="text-xl font-semibold mt-8 mb-3 text-brand-orange">
-                  Why Choose{" "}
-                  <span className="text-brand-orange font-bold">
-                    {" "}
-                    Planet Khan
-                  </span>
-                </div>
+                <h4 className="text-3xl font-semibold mt-8 mb-3 text-brand-orange">
+                  Why Choose Planet Khan
+                </h4>
                 <div className="my-8 pb-10 text-lg">
                   <Carousels />
                 </div>
               </div>
-              <div className="border-brand-orange border-b pb-4">
+              <div className="pb-4 text-base">
                 Join us in the realm of limitless possibilities. Let's
                 collaborate and create multimedia experiences that resonate,
                 inspire, and elevate your brand. Get in touch with{" "}
@@ -134,13 +161,15 @@ const About = () => {
                 today, and let's embark on a multimedia journey together!
               </div>
             </div>
-            <div className="my-3">
-              <div className="text-3xl font-bold !mb-8 text-brand-orange">
+          </div>
+          <div className="my-3 bg-white pt-10">
+            <div className="container">
+              <h5 className="text-3xl font-bold !mb-8 text-brand-black">
                 Vision
-              </div>
-              <div className="row text-left mb-8 pb-16 text-sm">
-                <div className="col-lg-3">
-                  <Card className="mb-2 !bg-brand-gold w-full md:min-h-[280px] text-brand-black">
+              </h5>
+              <div className="row text-left text-sm">
+                <div className="col-lg-6 mb-8">
+                  <Card className="mb-2 border w-full md:min-h-[180px] shadow-md text-base text-brand-black">
                     <Card.Body>
                       <Card.Text>
                         At Planet Kan, our vision is to redefine the landscape
@@ -154,8 +183,8 @@ const About = () => {
                     </Card.Body>
                   </Card>
                 </div>
-                <div className="col-lg-3">
-                  <Card className="mb-2 !bg-brand-gold w-full md:min-h-[280px] text-brand-black">
+                <div className="col-lg-6 mb-8">
+                  <Card className="mb-2 border w-full md:min-h-[180px] shadow-md text-base text-brand-black">
                     <Card.Body>
                       <Card.Text>
                         Our commitment lies in pushing the boundaries of what's
@@ -168,8 +197,8 @@ const About = () => {
                     </Card.Body>
                   </Card>
                 </div>
-                <div className="col-lg-3">
-                  <Card className="mb-2 !bg-brand-gold w-full md:min-h-[280px] text-brand-black">
+                <div className="col-lg-6 mb-8">
+                  <Card className="mb-2 border w-full md:min-h-[180px] shadow-md text-base text-brand-black">
                     <Card.Body>
                       <Card.Text>
                         Through our dedication to craftsmanship, creativity, and
@@ -183,8 +212,8 @@ const About = () => {
                     </Card.Body>
                   </Card>
                 </div>
-                <div className="col-lg-3">
-                  <Card className="mb-2 !bg-brand-gold w-full md:min-h-[280px] text-brand-black">
+                <div className="col-lg-6 mb-8">
+                  <Card className="mb-2 border w-full md:min-h-[180px] shadow-md text-base text-brand-black">
                     <Card.Body>
                       <Card.Text>
                         At Planet Kan, we strive to be the driving force behind
@@ -198,13 +227,13 @@ const About = () => {
                   </Card>
                 </div>
               </div>
+              <div className="bg-white py-16 w-full overflow-hidden">
+                <h5 className="md:text-3xl container text-base font-semibold mb-16 text-brand-black mt-8">
+                  Trusted by the world’s most innovative teams
+                </h5>
+                <Brands />
+              </div>
             </div>
-          </div>
-          <div className="bg-white mt-8 py-16 w-full overflow-hidden">
-            <div className="md:text-xl container text-base font-semibold mb-16 text-brand-black mt-8">
-              Trusted by the world’s most innovative teams
-            </div>
-            <Brands />
           </div>
         </div>
       </main>

@@ -15,7 +15,7 @@ const media = [
       },
       {
         id: 4,
-        image: require("../components/assets/images/media/photos/section1.jpg"),
+        image: require("../components/assets/images/media/photos/section1.jpeg"),
       },
       {
         id: 5,

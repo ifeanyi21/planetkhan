@@ -11,7 +11,7 @@ export default class Brands extends Component {
   render() {
     const settings = {
       infinite: true,
-      slidesToShow: 4,
+      slidesToShow: 5,
       slidesToScroll: 1,
       autoplay: true,
       speed: 9000,

@@ -7,6 +7,12 @@ import Header from "@/components/Headers";
 import Footer from "@/components/Footer";
 import SubTabs from "@/components/SubTabs";
 import media from "@/components/mediaImages";
+import { Montserrat } from "next/font/google";
+
+const montserrat = Montserrat({
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  subsets: ["latin"],
+});
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -45,9 +51,9 @@ export default function ProfileTabs() {
   };
 
   return (
-    <div className="bg-brand-black">
+    <div className={`bg-brand-black ${montserrat.className}`}>
       <Header />
-      <main className="overflow-hidden">
+      <main className="overflow-hidden bg-white">
         <div className="relative w-full mediaoverlay glow shadow-lg puff-in-hor">
           <h1 className="absolute md:text-5xl text-2xl font-bold top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white">
             Our Portfolio
@@ -70,12 +76,12 @@ export default function ProfileTabs() {
                 >
                   <Tab
                     label="Photos"
-                    className="!text-brand-gold md:!text-2xl"
+                    className={`!text-brand-gold md:!text-xl ${montserrat.className}`}
                     {...a11yProps(0)}
                   />
                   <Tab
                     label="Videos"
-                    className="!text-brand-gold md:!text-2xl"
+                    className={`!text-brand-gold md:!text-xl ${montserrat.className}`}
                     {...a11yProps(1)}
                   />
                 </Tabs>

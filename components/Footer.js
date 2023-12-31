@@ -81,9 +81,9 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        <div className="flex justify-center border-brand-orange pt-4 border-t-2 text-gray-300">
+        <div className="flex justify-center gap-1 border-brand-gold pt-4 border-t-2 text-gray-300">
           Copyrights © {new Date().getFullYear()} || All Rights Reserved by
-          Planet Khan Multimedia
+          <span className="text-brand-orange"> Planet Khan Multimedia</span>
         </div>
       </div>
     </div>
