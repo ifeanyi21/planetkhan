@@ -89,7 +89,7 @@ export default function ProfileTabs() {
               <CustomTabPanel value={value} index={0}>
                 <SubTabs
                   events={media[0].events}
-                  potraits={media[0].events}
+                  potraits={media[0].potraits}
                   documentaries={media[0].events}
                 />
               </CustomTabPanel>

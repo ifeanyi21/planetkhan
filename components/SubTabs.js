@@ -1,8 +1,9 @@
-import { Box, Tab, Tabs } from "@mui/material";
-import React from "react";
+import { Box, Button, Tab, Tabs } from "@mui/material";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import useWindowSize from "./UseWindowSize";
 import Image from "next/image";
+import ModalImage from "./ModalImage";
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -36,9 +37,22 @@ function a11yProps(index) {
 const SubTabs = ({ events, potraits, documentaries }) => {
   const size = useWindowSize();
   const [value, setValue] = React.useState(0);
+  const [open, setOpen] = React.useState(false);
+
+  const [imagesrc, setImagesrc] = useState("");
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
+  };
+
+  const handleClickOpen = (item) => {
+    console.log(item.default.src);
+    setImagesrc(item.default.src);
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
   };
   return (
     <Box sx={{ width: "100%", marginTop: 3 }}>
@@ -73,16 +87,22 @@ const SubTabs = ({ events, potraits, documentaries }) => {
           {events.map((item) => {
             return (
               <div className="col-md-4 mb-8 cursor-pointer" key={item.id}>
-                <Image
-                  src={item.image}
-                  className="rounded-sm w-full h-[300px] object-cover"
-                  alt="Picture"
-                  width={200}
-                  height={200}
-                />
+                <Button
+                  className="w-full"
+                  onClick={(e) => handleClickOpen(item.image)}
+                >
+                  <Image
+                    src={item.image}
+                    className="rounded-sm w-full h-[300px] object-cover"
+                    alt="Picture"
+                    width={200}
+                    height={200}
+                  />
+                </Button>
               </div>
             );
           })}
+          <ModalImage image={imagesrc} handleClose={handleClose} open={open} />
         </div>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
@@ -90,16 +110,22 @@ const SubTabs = ({ events, potraits, documentaries }) => {
           {potraits.map((item) => {
             return (
               <div className="col-md-4 mb-8" key={item.id}>
-                <Image
-                  src={item.image}
-                  className="rounded-sm w-full h-[300px] object-cover"
-                  alt="Picture"
-                  width={200}
-                  height={200}
-                />
+                <Button
+                  className="w-full"
+                  onClick={(e) => handleClickOpen(item.image)}
+                >
+                  <Image
+                    src={item.image}
+                    className="rounded-sm w-full h-[300px] object-cover"
+                    alt="Picture"
+                    width={200}
+                    height={200}
+                  />
+                </Button>
               </div>
             );
           })}
+          <ModalImage image={imagesrc} handleClose={handleClose} open={open} />
         </div>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={2}>
@@ -107,16 +133,22 @@ const SubTabs = ({ events, potraits, documentaries }) => {
           {documentaries.map((item) => {
             return (
               <div className="col-md-4 mb-8" key={item.id}>
-                <Image
-                  src={item.image}
-                  className="rounded-sm w-full h-[300px] object-cover"
-                  alt="Picture"
-                  width={200}
-                  height={200}
-                />
+                <Button
+                  className="w-full"
+                  onClick={(e) => handleClickOpen(item.image)}
+                >
+                  <Image
+                    src={item.image}
+                    className="rounded-sm w-full h-[300px] object-cover"
+                    alt="Picture"
+                    width={200}
+                    height={200}
+                  />
+                </Button>
               </div>
             );
           })}
+          <ModalImage image={imagesrc} handleClose={handleClose} open={open} />
         </div>
       </CustomTabPanel>
     </Box>
