@@ -46,7 +46,7 @@ const montserrat = Montserrat({
 
 export default function Home() {
   const { ref, inView } = useInView({
-    threshold: 0.2,
+    threshold: 0.1,
   });
 
   return (
@@ -56,11 +56,8 @@ export default function Home() {
         <div className="relative isolate px-6 pt-14 lg:px-8">
           <div className="mx-auto max-w-3xl py-32 sm:py-48 lg:py-56">
             <div className="text-center relative">
-              <h1 className="text-3xl font-bold tracking-tight text-white sm:text-6xl puff-in-hor">
-                Planet Kan{" "}
-                <span className="animate-pulse text-brand-gold">
-                  Multimedia
-                </span>
+              <h1 className="text-3xl font-bold tracking-tight text-white sm:text-6xl slide-in-left">
+                Planet Kan <span className="text-brand-gold">Multimedia</span>
               </h1>
               <div className="absolute right-[76px]">
                 <svg
