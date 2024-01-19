@@ -49,7 +49,7 @@ const About = () => {
                   At{" "}
                   <span className="text-brand-orange font-bold">
                     {" "}
-                    Planet Khan Multimedia
+                    Planet kan Multimedia
                   </span>
                   , we're passionate about the boundless possibilities that
                   multimedia offers. We specialize in harnessing the power of
@@ -67,7 +67,7 @@ const About = () => {
               Since our inception,{" "}
               <span className="text-brand-orange font-bold">
                 {" "}
-                Planet Khan Multimedia
+                Planet kan Multimedia
               </span>{" "}
               has been a trailblazer in the world of multimedia. Founded on the
               belief that creativity knows no bounds, we've embarked on a
@@ -132,7 +132,7 @@ const About = () => {
                   At{" "}
                   <span className="text-brand-orange font-bold">
                     {" "}
-                    Planet Khan
+                    Planet kan
                   </span>
                   , collaboration and innovation are ingrained in our DNA. We
                   believe in working closely with our clients, understanding
@@ -144,7 +144,7 @@ const About = () => {
               </div>
               <div className="col-md-6 mb-4">
                 <h4 className="text-3xl font-semibold mt-8 mb-3 text-brand-orange">
-                  Why Choose Planet Khan
+                  Why Choose Planet kan
                 </h4>
                 <div className="my-8 pb-10 text-lg">
                   <Carousels />
@@ -156,7 +156,7 @@ const About = () => {
                 inspire, and elevate your brand. Get in touch with{" "}
                 <span className="text-brand-orange font-bold">
                   {" "}
-                  Planet Khan Multimedia
+                  Planet kan Multimedia
                 </span>{" "}
                 today, and let's embark on a multimedia journey together!
               </div>

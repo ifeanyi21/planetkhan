@@ -99,7 +99,7 @@ export default function Home() {
               >
                 <div className="lg:max-w-lg">
                   <h2 className="text-base font-semibold leading-7 text-brand-orange">
-                    Planet Khan Multimedia
+                    Planet kan Multimedia
                   </h2>
                   <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                     Brand Values

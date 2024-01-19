@@ -23,7 +23,7 @@ export default function ModalImage({ image, handleClose, open }) {
         width={300}
         height={300}
         className="w-full h-auto"
-        alt="Planet Khan Samples"
+        alt="Planet kan Samples"
       />
     </Dialog>
   );

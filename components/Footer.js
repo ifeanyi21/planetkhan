@@ -16,7 +16,7 @@ const Footer = () => {
     <div className="container">
       <div className="row pt-20 pb-4">
         <div className="col-md-4 mb-4">
-          <Image src={Logo} alt="Planet Khan Logo" width={140} height={140} />
+          <Image src={Logo} alt="Planet kan Logo" width={140} height={140} />
           <div className="my-8 text-sm text-gray-300">
             At Planet Kan Multimedia, we're passionate about the boundless
             possibilities that multimedia offers. We specialize in harnessing
@@ -62,11 +62,11 @@ const Footer = () => {
           </div>
           <div className="text-gray-300 text-sm text-left mb-4">
             <a
-              href="mailto:planetkhan@gmail.com"
+              href="mailto:planetkan@gmail.com"
               className="flex gap-2 items-center"
             >
               <EnvelopeIcon className="w-7 h-7 text-brand-gold" />{" "}
-              <span className="text-base">planetkhan@gmail.com</span>
+              <span className="text-base">theplanetkan@gmail.com</span>
             </a>
           </div>
           <div className="text-gray-300 text-sm text-left mb-4 flex gap-5">
@@ -83,7 +83,7 @@ const Footer = () => {
         </div>
         <div className="flex justify-center gap-1 border-brand-gold pt-4 border-t-2 text-gray-300">
           Copyrights © {new Date().getFullYear()} || All Rights Reserved by
-          <span className="text-brand-orange"> Planet Khan Multimedia</span>
+          <span className="text-brand-orange"> Planet kan Multimedia</span>
         </div>
       </div>
     </div>
