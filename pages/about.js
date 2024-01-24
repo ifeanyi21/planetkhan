@@ -4,18 +4,18 @@ import Carousels from "@/components/Carousels";
 import { Card } from "react-bootstrap";
 import Brands from "@/components/Brands";
 import Footer from "@/components/Footer";
+import Lottie from "lottie-react";
+import Animation from "../components/assets/animations/Animation.json";
 import { Montserrat } from "next/font/google";
-// import ReactPlayer from "react-player";
-// import Video from "../components/assets/animations/Animation1.webm";
-// import * as LottiePlayer from "@lottiefiles/lottie-player";
 
-const montserrat = Montserrat({
+const fonts = Montserrat({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
 });
+
 const About = () => {
   return (
-    <div className={`bg-brand-black ${montserrat.className}`}>
+    <div className={`bg-brand-black ${fonts.className}`}>
       <Header />
       <main className="overflow-hidden">
         <div className="relative w-full overlay glow shadow-lg">
@@ -25,27 +25,17 @@ const About = () => {
         </div>
         <div className="mt-8 text-gray-300 font-medium text-lg md:text-center text-left slide-in-bottom">
           <div className="container">
-            <div className="row">
+            <div className="row mb-10">
               <div className="col-md-6 mb-3">
-                {/* <lottie-player
-                  autoplay
-                  controls
-                  loop
-                  mode="normal"
-                  src="https://assets3.lottiefiles.com/packages/lf20_UJNc2t.json"
-                  style="width: 320px"
-                ></lottie-player> */}
-                {/* <ReactPlayer
-                  url={Video}
-                  controls={false}
-                  width={500}
-                  height={500}
+                <Lottie
+                  animationData={Animation}
+                  className="h-96"
+                  loop={true}
                 />
-                <source src={Video} type="video/webm" /> */}
               </div>
-              <div className="col-md-6 mb-3">
+              <div className="col-md-6 my-auto">
                 {" "}
-                <div className="my-16 text-center text-base">
+                <div className="my-16 text-center text-lg">
                   At{" "}
                   <span className="text-brand-orange font-bold">
                     {" "}
@@ -128,7 +118,7 @@ const About = () => {
                 <h3 className="text-3xl font-semibold mt-8 mb-3 text-brand-orange">
                   Our Approach
                 </h3>
-                <div className="my-8 pb-10 text-base">
+                <div className="my-8 pb-10 text-lg">
                   At{" "}
                   <span className="text-brand-orange font-bold">
                     {" "}
@@ -150,7 +140,7 @@ const About = () => {
                   <Carousels />
                 </div>
               </div>
-              <div className="pb-4 text-base">
+              <div className="pb-4 text-lg">
                 Join us in the realm of limitless possibilities. Let's
                 collaborate and create multimedia experiences that resonate,
                 inspire, and elevate your brand. Get in touch with{" "}
@@ -167,7 +157,7 @@ const About = () => {
               <h5 className="text-3xl font-bold !mb-8 text-brand-black">
                 Vision
               </h5>
-              <div className="row text-left text-sm">
+              <div className="row text-left text-lg">
                 <div className="col-lg-6 mb-8">
                   <Card className="mb-2 border w-full md:min-h-[180px] shadow-md text-base text-brand-black">
                     <Card.Body>

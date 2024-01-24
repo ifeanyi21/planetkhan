@@ -4,6 +4,12 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { Montserrat } from "next/font/google";
+
+const montserrat = Montserrat({
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  subsets: ["latin"],
+});
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -17,7 +23,9 @@ export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="inset-x-0 top-0 z-50 shadow-md">
+    <header
+      className={`${montserrat.className} inset-x-0 top-0 z-50 shadow-md`}
+    >
       <nav
         className="flex items-center justify-between p-6 lg:px-8 text-brand-gold text-lg"
         aria-label="Global"

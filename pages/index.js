@@ -9,8 +9,13 @@ import {
 import Banner from "../components/assets/images/camera.jpg";
 import Image from "next/image";
 import Footer from "@/components/Footer";
-import { Montserrat } from "next/font/google";
 import { useInView } from "react-intersection-observer";
+import { Montserrat } from "next/font/google";
+
+const fonts = Montserrat({
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  subsets: ["latin"],
+});
 
 const features = [
   {
@@ -39,18 +44,13 @@ const features = [
   },
 ];
 
-const montserrat = Montserrat({
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  subsets: ["latin"],
-});
-
 export default function Home() {
   const { ref, inView } = useInView({
     threshold: 0.1,
   });
 
   return (
-    <div className={`bg-brand-black ${montserrat.className}`}>
+    <div className={`bg-brand-black ${fonts.className}`}>
       <Header />
       <main className="overflow-hidden">
         <div className="relative isolate px-6 pt-14 lg:px-8">

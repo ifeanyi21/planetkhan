@@ -5,6 +5,8 @@ import { Montserrat } from "next/font/google";
 import { Form } from "react-bootstrap";
 import { Button } from "@mui/material";
 import { FaEnvelope } from "react-icons/fa";
+import Animation from "../components/assets/animations/Contact.json";
+import Lottie from "lottie-react";
 
 const montserrat = Montserrat({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -64,7 +66,7 @@ const Contact = () => {
   return (
     <div className={`bg-brand-black ${montserrat.className}`}>
       <Header />
-      <main className="overflow-hidden">
+      <main className="overflow-hidden pb-10 border-white border-b">
         <div className="relative w-full contactoverlay glow shadow-lg">
           <h1 className="absolute md:text-5xl text-2xl font-bold top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white">
             Get In Touch
@@ -72,75 +74,84 @@ const Contact = () => {
         </div>
         <div className="mt-8 text-gray-300 font-medium text-lg md:text-center text-left slide-in-bottom">
           <div className="container">
-            <div className="col-md-6 text-left !mt-10">
-              <h5 className="mb-4 text-xl">Write a Message</h5>
-              <Form onSubmit={handleSubmit}>
-                <Form.Group
-                  className="mb-3"
-                  controlId="exampleForm.ControlInput1"
-                >
-                  <Form.Label className="text-sm text-brand-gold">
-                    Your Name
-                  </Form.Label>
-                  <Form.Control
-                    type="text"
-                    required
-                    disabled={loading}
-                    onChange={handleChange}
-                    name="name"
-                    value={details.name}
-                  />
-                </Form.Group>
-                <Form.Group
-                  className="mb-3"
-                  controlId="exampleForm.ControlInput1"
-                >
-                  <Form.Label className="text-sm text-brand-gold">
-                    Email address
-                  </Form.Label>
-                  <Form.Control
-                    type="email"
-                    required
-                    disabled={loading}
-                    onChange={handleChange}
-                    value={details.email}
-                    name="email"
-                  />
-                </Form.Group>
-                <Form.Group
-                  className="mb-3"
-                  controlId="exampleForm.ControlTextarea1"
-                >
-                  <Form.Label className="text-sm text-brand-gold">
-                    How Can We Help You?
-                  </Form.Label>
-                  <Form.Control
-                    as="textarea"
-                    rows={5}
-                    required
-                    placeholder="Please Send all Inquiries to"
-                    onChange={handleChange}
-                    value={details.message}
-                    name="message"
-                    disabled={loading}
-                  />
-                </Form.Group>
-                <div className="my-4">
-                  <Button
-                    startIcon={<FaEnvelope />}
-                    className="w-full !bg-brand-gold hover:!bg-brand-orange"
-                    variant="contained"
-                    type={loading ? "button" : "submit"}
+            <div className="row">
+              <div className="col-md-6 text-left !mt-10">
+                <h5 className="mb-4 text-xl">Write a Message</h5>
+                <Form onSubmit={handleSubmit}>
+                  <Form.Group
+                    className="mb-3"
+                    controlId="exampleForm.ControlInput1"
                   >
-                    {loading ? "Sending Message..." : "Send a Message"}
-                  </Button>
-                </div>
-                {message && (
-                  <Alert message={message} severity={notificationType}>
-                    {message}
-                  </Alert>
-                )}
-              </Form>
+                    <Form.Label className="text-sm text-brand-gold">
+                      Your Name
+                    </Form.Label>
+                    <Form.Control
+                      type="text"
+                      required
+                      disabled={loading}
+                      onChange={handleChange}
+                      name="name"
+                      value={details.name}
+                    />
+                  </Form.Group>
+                  <Form.Group
+                    className="mb-3"
+                    controlId="exampleForm.ControlInput1"
+                  >
+                    <Form.Label className="text-sm text-brand-gold">
+                      Email address
+                    </Form.Label>
+                    <Form.Control
+                      type="email"
+                      required
+                      disabled={loading}
+                      onChange={handleChange}
+                      value={details.email}
+                      name="email"
+                    />
+                  </Form.Group>
+                  <Form.Group
+                    className="mb-3"
+                    controlId="exampleForm.ControlTextarea1"
+                  >
+                    <Form.Label className="text-sm text-brand-gold">
+                      How Can We Help You?
+                    </Form.Label>
+                    <Form.Control
+                      as="textarea"
+                      rows={5}
+                      required
+                      placeholder="Please Send all Inquiries to"
+                      onChange={handleChange}
+                      value={details.message}
+                      name="message"
+                      disabled={loading}
+                    />
+                  </Form.Group>
+                  <div className="my-4">
+                    <Button
+                      startIcon={<FaEnvelope />}
+                      className="w-full !bg-brand-gold hover:!bg-brand-orange"
+                      variant="contained"
+                      type={loading ? "button" : "submit"}
+                    >
+                      {loading ? "Sending Message..." : "Send a Message"}
+                    </Button>
+                  </div>
+                  {message && (
+                    <Alert message={message} severity={notificationType}>
+                      {message}
+                    </Alert>
+                  )}
+                </Form>
+              </div>
+              <div className="col-md-6 text-left !mt-10">
+                <Lottie
+                  animationData={Animation}
+                  className="h-96"
+                  loop={true}
+                />
+              </div>
             </div>
           </div>
         </div>
