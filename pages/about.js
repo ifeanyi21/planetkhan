@@ -75,7 +75,7 @@ const About = () => {
               </h4>
               <div className="row">
                 <div className="col-md-4 p-2 mb-4">
-                  <div className="cardGlass p-3 text-gray-900">
+                  <div className="cardGlass p-3 text-gray-900 text-base">
                     <span className="text-brand-orange font-semibold">
                       {" "}
                       Creative Multimedia Production:
@@ -88,7 +88,7 @@ const About = () => {
                   </div>
                 </div>
                 <div className="col-md-4 p-2 mb-4">
-                  <div className="cardGlass p-3 text-gray-900">
+                  <div className="cardGlass p-3 text-gray-900 text-base">
                     <span className="text-brand-orange font-semibold">
                       Innovative Design Solutions:{" "}
                     </span>
@@ -99,7 +99,7 @@ const About = () => {
                   </div>
                 </div>
                 <div className="col-md-4 p-2 mb-4">
-                  <div className="cardGlass p-3 text-gray-900">
+                  <div className="cardGlass p-3 text-gray-900 text-base">
                     <span className="text-brand-orange font-semibold">
                       Technology-driven Solutions:{" "}
                     </span>
@@ -159,7 +159,7 @@ const About = () => {
               </h5>
               <div className="row text-left text-lg">
                 <div className="col-lg-6 mb-8">
-                  <Card className="mb-2 border w-full md:min-h-[180px] shadow-md text-base text-brand-black">
+                  <Card className="mb-2 border w-full md:min-h-[180px] shadow-lg text-base text-brand-black">
                     <Card.Body>
                       <Card.Text>
                         At Planet Kan, our vision is to redefine the landscape
@@ -174,7 +174,7 @@ const About = () => {
                   </Card>
                 </div>
                 <div className="col-lg-6 mb-8">
-                  <Card className="mb-2 border w-full md:min-h-[180px] shadow-md text-base text-brand-black">
+                  <Card className="mb-2 border w-full md:min-h-[180px] shadow-lg text-base text-brand-black">
                     <Card.Body>
                       <Card.Text>
                         Our commitment lies in pushing the boundaries of what's
@@ -188,7 +188,7 @@ const About = () => {
                   </Card>
                 </div>
                 <div className="col-lg-6 mb-8">
-                  <Card className="mb-2 border w-full md:min-h-[180px] shadow-md text-base text-brand-black">
+                  <Card className="mb-2 border w-full md:min-h-[180px] shadow-lg text-base text-brand-black">
                     <Card.Body>
                       <Card.Text>
                         Through our dedication to craftsmanship, creativity, and
@@ -203,7 +203,7 @@ const About = () => {
                   </Card>
                 </div>
                 <div className="col-lg-6 mb-8">
-                  <Card className="mb-2 border w-full md:min-h-[180px] shadow-md text-base text-brand-black">
+                  <Card className="mb-2 border w-full md:min-h-[180px] shadow-lg text-base text-brand-black">
                     <Card.Body>
                       <Card.Text>
                         At Planet Kan, we strive to be the driving force behind
