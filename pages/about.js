@@ -112,117 +112,126 @@ const About = () => {
               </div>
             </div>
           </div>
-          <div className="container">
-            <div className="row py-24">
-              <div className="col-md-6 mb-4">
-                <h3 className="text-3xl font-semibold mt-8 mb-3 text-brand-orange">
-                  Our Approach
-                </h3>
-                <div className="my-8 pb-10 text-lg">
-                  At{" "}
-                  <span className="text-brand-orange font-bold">
-                    {" "}
-                    Planet kan
-                  </span>
-                  , collaboration and innovation are ingrained in our DNA. We
-                  believe in working closely with our clients, understanding
-                  their objectives, and infusing our projects with creativity
-                  and technical prowess. Whether it's a small-scale project or a
-                  comprehensive multimedia campaign, we're committed to
-                  delivering excellence.
+          <div className="bg-white">
+            <div class="mx-auto w-full overflow-y-scroll bg-cover bg-fixed bg-center bg-no-repeat shadow-lg bg3 bg-white">
+              <div className="container">
+                <div className="row py-24">
+                  <div className="col-md-6 mb-4">
+                    <h3 className="text-3xl font-bold mt-8 mb-3 text-brand-orange">
+                      Our Approach
+                    </h3>
+                    <div className="my-8 pb-10 text-lg">
+                      At{" "}
+                      <span className="text-brand-orange font-bold">
+                        {" "}
+                        Planet kan
+                      </span>
+                      , collaboration and innovation are ingrained in our DNA.
+                      We believe in working closely with our clients,
+                      understanding their objectives, and infusing our projects
+                      with creativity and technical prowess. Whether it's a
+                      small-scale project or a comprehensive multimedia
+                      campaign, we're committed to delivering excellence.
+                    </div>
+                  </div>
+                  <div className="col-md-6 mb-4">
+                    <h4 className="text-3xl font-bold mt-8 mb-3 text-brand-orange">
+                      Why Choose Planet kan
+                    </h4>
+                    <div className="my-8 pb-10 text-lg">
+                      <Carousels />
+                    </div>
+                  </div>
+                  <div className="pb-4 text-lg">
+                    Join us in the realm of limitless possibilities. Let's
+                    collaborate and create multimedia experiences that resonate,
+                    inspire, and elevate your brand. Get in touch with{" "}
+                    <span className="text-brand-orange font-bold">
+                      {" "}
+                      Planet kan Multimedia
+                    </span>{" "}
+                    today, and let's embark on a multimedia journey together!
+                  </div>
                 </div>
-              </div>
-              <div className="col-md-6 mb-4">
-                <h4 className="text-3xl font-semibold mt-8 mb-3 text-brand-orange">
-                  Why Choose Planet kan
-                </h4>
-                <div className="my-8 pb-10 text-lg">
-                  <Carousels />
-                </div>
-              </div>
-              <div className="pb-4 text-lg">
-                Join us in the realm of limitless possibilities. Let's
-                collaborate and create multimedia experiences that resonate,
-                inspire, and elevate your brand. Get in touch with{" "}
-                <span className="text-brand-orange font-bold">
-                  {" "}
-                  Planet kan Multimedia
-                </span>{" "}
-                today, and let's embark on a multimedia journey together!
               </div>
             </div>
-          </div>
-          <div className="my-3 bg-white pt-10">
-            <div className="container">
-              <h5 className="text-3xl font-bold !mb-8 text-brand-black">
-                Vision
+
+            <div class="mx-auto w-full overflow-y-scroll bg-cover bg-fixed bg-center bg-no-repeat shadow-lg bgCamera bg-white mt-32">
+              <div className="my-3 pt-10">
+                <div className="container">
+                  <h5 className="text-3xl font-bold !mb-8 text-white">
+                    Vision
+                  </h5>
+                  <div className="row text-left text-lg">
+                    <div className="col-lg-6 mb-8">
+                      <Card className="mb-2 border w-full md:min-h-[180px] shadow-lg text-base text-white bg-transparent">
+                        <Card.Body>
+                          <Card.Text>
+                            At Planet Kan, our vision is to redefine the
+                            landscape of multimedia by empowering creativity
+                            without limits. We envision a world where
+                            innovation, technology, and storytelling converge
+                            seamlessly to create transformative and immersive
+                            experiences that captivate, inspire, and leave an
+                            indelible mark on audiences worldwide.
+                          </Card.Text>
+                        </Card.Body>
+                      </Card>
+                    </div>
+                    <div className="col-lg-6 mb-8">
+                      <Card className="mb-2 border w-full md:min-h-[180px] shadow-lg text-base text-white bg-transparent">
+                        <Card.Body>
+                          <Card.Text>
+                            Our commitment lies in pushing the boundaries of
+                            what's possible, harnessing cutting-edge technology,
+                            and fostering a culture of innovation. We aspire to
+                            be pioneers in the industry, continuously exploring
+                            new frontiers in multimedia, and setting benchmarks
+                            for excellence.
+                          </Card.Text>
+                        </Card.Body>
+                      </Card>
+                    </div>
+                    <div className="col-lg-6 mb-8">
+                      <Card className="mb-2 border w-full md:min-h-[180px] shadow-lg text-base text-white bg-transparent">
+                        <Card.Body>
+                          <Card.Text>
+                            Through our dedication to craftsmanship, creativity,
+                            and collaboration, we aim to be the catalysts for
+                            change, redefining how stories are told and
+                            experiences are felt. Our vision is to be recognized
+                            as the premier destination where imagination meets
+                            innovation, crafting multimedia experiences that
+                            transcend expectations and shape the future of
+                            digital engagement.
+                          </Card.Text>
+                        </Card.Body>
+                      </Card>
+                    </div>
+                    <div className="col-lg-6 mb-8">
+                      <Card className="mb-2 border w-full md:min-h-[180px] shadow-lg text-base text-white bg-transparent">
+                        <Card.Body>
+                          <Card.Text>
+                            At Planet Kan, we strive to be the driving force
+                            behind the evolution of multimedia, leaving an
+                            enduring legacy of creativity, innovation, and
+                            unparalleled excellence. This vision guides our
+                            every endeavor, fuels our passion, and inspires us
+                            to continuously raise the bar in the world of
+                            multimedia.
+                          </Card.Text>
+                        </Card.Body>
+                      </Card>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-white py-16 w-full overflow-hidden">
+              <h5 className="md:text-3xl container text-base font-semibold mb-16 text-brand-black mt-8">
+                Trusted by the world’s most innovative teams
               </h5>
-              <div className="row text-left text-lg">
-                <div className="col-lg-6 mb-8">
-                  <Card className="mb-2 border w-full md:min-h-[180px] shadow-lg text-base text-brand-black">
-                    <Card.Body>
-                      <Card.Text>
-                        At Planet Kan, our vision is to redefine the landscape
-                        of multimedia by empowering creativity without limits.
-                        We envision a world where innovation, technology, and
-                        storytelling converge seamlessly to create
-                        transformative and immersive experiences that captivate,
-                        inspire, and leave an indelible mark on audiences
-                        worldwide.
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </div>
-                <div className="col-lg-6 mb-8">
-                  <Card className="mb-2 border w-full md:min-h-[180px] shadow-lg text-base text-brand-black">
-                    <Card.Body>
-                      <Card.Text>
-                        Our commitment lies in pushing the boundaries of what's
-                        possible, harnessing cutting-edge technology, and
-                        fostering a culture of innovation. We aspire to be
-                        pioneers in the industry, continuously exploring new
-                        frontiers in multimedia, and setting benchmarks for
-                        excellence.
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </div>
-                <div className="col-lg-6 mb-8">
-                  <Card className="mb-2 border w-full md:min-h-[180px] shadow-lg text-base text-brand-black">
-                    <Card.Body>
-                      <Card.Text>
-                        Through our dedication to craftsmanship, creativity, and
-                        collaboration, we aim to be the catalysts for change,
-                        redefining how stories are told and experiences are
-                        felt. Our vision is to be recognized as the premier
-                        destination where imagination meets innovation, crafting
-                        multimedia experiences that transcend expectations and
-                        shape the future of digital engagement.
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </div>
-                <div className="col-lg-6 mb-8">
-                  <Card className="mb-2 border w-full md:min-h-[180px] shadow-lg text-base text-brand-black">
-                    <Card.Body>
-                      <Card.Text>
-                        At Planet Kan, we strive to be the driving force behind
-                        the evolution of multimedia, leaving an enduring legacy
-                        of creativity, innovation, and unparalleled excellence.
-                        This vision guides our every endeavor, fuels our
-                        passion, and inspires us to continuously raise the bar
-                        in the world of multimedia.
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </div>
-              </div>
-              <div className="bg-white py-16 w-full overflow-hidden">
-                <h5 className="md:text-3xl container text-base font-semibold mb-16 text-brand-black mt-8">
-                  Trusted by the world’s most innovative teams
-                </h5>
-                <Brands />
-              </div>
+              <Brands />
             </div>
           </div>
         </div>

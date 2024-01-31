@@ -11,6 +11,7 @@ import Image from "next/image";
 import Footer from "@/components/Footer";
 import { useInView } from "react-intersection-observer";
 import { Montserrat } from "next/font/google";
+import ParallaxComponent from "@/components/ParallaxComponent";
 
 const fonts = Montserrat({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -45,58 +46,57 @@ const features = [
 ];
 
 export default function Home() {
-  const { ref, inView } = useInView({
-    threshold: 0.1,
-  });
+  // const { ref, inView } = useInView({
+  //   threshold: 0.1,
+  // });
 
   return (
     <div className={`bg-brand-black ${fonts.className}`}>
       <Header />
       <main className="overflow-hidden">
-        <div className="relative isolate px-6 pt-14 lg:px-8">
-          <div className="mx-auto max-w-3xl py-32 sm:py-48 lg:py-56">
-            <div className="text-center relative">
-              <h1 className="text-3xl font-bold tracking-tight text-white sm:text-6xl slide-in-left">
-                Planet Kan <span className="text-brand-gold">Multimedia</span>
-              </h1>
-              <div className="absolute right-[76px]">
-                <svg
-                  className="md:w-[220px] md:h-[24px] w-[180px] h-[10px]"
-                  viewBox="0 0 220 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M134.66 13.107c-10.334-.37-20.721-.5-31.12-.291l-2.6.06c-4.116.04-8.193.602-12.3.749-14.502.43-29.029 1.196-43.514 2.465-6.414.63-12.808 1.629-19.04 2.866-7.93 1.579-16.113 3.71-23.367 5.003-2.211.374-3.397-1.832-2.31-4.906.5-1.467 1.838-3.456 3.418-4.813a16.047 16.047 0 0 1 6.107-3.365c16.88-4.266 33.763-6.67 51.009-7.389C71.25 3.187 81.81 1.6 92.309.966c11.53-.65 23.097-.938 34.66-.96 7.117-.054 14.25.254 21.36.318l16.194.803 4.62.39c3.85.32 7.693.618 11.53.813 8.346.883 16.673.802 25.144 2.159 1.864.276 3.714.338 5.566.873l.717.225c6.162 1.977 7.92 3.64 7.9 7.197l-.003.203c-.017.875.05 1.772-.112 2.593-.581 2.762-4.066 4.12-8.637 3.63-13.696-1.06-27.935-3.332-42.97-4.168-11.055-.83-22.314-1.459-33.596-1.603l-.022-.332Z"
-                    fill="#E07C0F"
-                    fillRule="evenodd"
-                  ></path>
-                </svg>
-              </div>
+        <div class="mx-auto w-full overflow-y-scroll bg-cover bg-fixed bg-center bg-no-repeat shadow-lg bg1">
+          <div className="relative isolate px-6 pt-14 lg:px-8">
+            <div className="mx-auto max-w-3xl py-32 sm:py-48 lg:py-56">
+              <div className="text-center relative">
+                <h1 className="text-3xl font-bold tracking-tight text-white sm:text-6xl slide-in-left">
+                  Planet Kan{" "}
+                  <span className="text-brand-orange">Multimedia</span>
+                </h1>
+                <div className="absolute right-[76px]">
+                  <svg
+                    className="md:w-[220px] md:h-[24px] w-[180px] h-[10px]"
+                    viewBox="0 0 220 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M134.66 13.107c-10.334-.37-20.721-.5-31.12-.291l-2.6.06c-4.116.04-8.193.602-12.3.749-14.502.43-29.029 1.196-43.514 2.465-6.414.63-12.808 1.629-19.04 2.866-7.93 1.579-16.113 3.71-23.367 5.003-2.211.374-3.397-1.832-2.31-4.906.5-1.467 1.838-3.456 3.418-4.813a16.047 16.047 0 0 1 6.107-3.365c16.88-4.266 33.763-6.67 51.009-7.389C71.25 3.187 81.81 1.6 92.309.966c11.53-.65 23.097-.938 34.66-.96 7.117-.054 14.25.254 21.36.318l16.194.803 4.62.39c3.85.32 7.693.618 11.53.813 8.346.883 16.673.802 25.144 2.159 1.864.276 3.714.338 5.566.873l.717.225c6.162 1.977 7.92 3.64 7.9 7.197l-.003.203c-.017.875.05 1.772-.112 2.593-.581 2.762-4.066 4.12-8.637 3.63-13.696-1.06-27.935-3.332-42.97-4.168-11.055-.83-22.314-1.459-33.596-1.603l-.022-.332Z"
+                      fill="#E07C0F"
+                      fillRule="evenodd"
+                    ></path>
+                  </svg>
+                </div>
 
-              <p className="my-7 md:my-8 md:text-xl text-base leading-8 text-white slide-in-right">
-                Where Dreams Live.
-              </p>
-              <div className="flex items-center justify-center gap-x-6 slide-in-left">
-                <div className="sm:mb-8 sm:flex sm:justify-center">
-                  <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-brand-orange ring-1 glow ring-brand-orange hover:ring-gray-900/20">
-                    <Link href="/about" className="font-semibold">
-                      <span aria-hidden="true" />
-                      Get Started <span aria-hidden="true">&rarr;</span>
-                    </Link>
+                <p className="my-7 md:my-8 md:text-xl text-base leading-8 text-white slide-in-right">
+                  Where Dreams Live.
+                </p>
+                <div className="flex items-center justify-center gap-x-6 slide-in-left">
+                  <div className="sm:mb-8 sm:flex sm:justify-center">
+                    <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-white ring-1 glow ring-brand-orange hover:ring-gray-900/20 bg-brand-orange">
+                      <Link href="/about" className="font-semibold">
+                        <span aria-hidden="true" />
+                        Get Started <span aria-hidden="true">&rarr;</span>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div ref={ref} className="overflow-hidden bg-white py-24 sm:py-32">
+        <div className="overflow-hidden bg-white py-24 sm:py-32 rounded">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-              <div
-                className={`lg:pr-8 lg:pt-4 ${
-                  inView ? "slide-in-bottom opacity-100" : "opacity-0"
-                }`}
-              >
+              <div className={`lg:pr-8 lg:pt-4 `}>
                 <div className="lg:max-w-lg">
                   <h2 className="text-base font-semibold leading-7 text-brand-orange">
                     Planet kan Multimedia
@@ -127,16 +127,15 @@ export default function Home() {
                   </dl>
                 </div>
               </div>
-              <Image
-                ref={ref}
-                src={Banner}
-                alt="Product screenshot"
-                className={`md:block hidden w-[48rem] h-[1100px] object-cover max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0 ${
-                  inView ? "slide-in-right opacity-100" : "opacity-0"
-                }`}
-                width={2432}
-                height={400}
-              />
+              <ParallaxComponent>
+                <Image
+                  src={Banner}
+                  alt="Product screenshot"
+                  className={`md:block hidden w-[48rem] h-[1100px] object-cover max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0 `}
+                  width={2432}
+                  height={400}
+                />
+              </ParallaxComponent>
             </div>
           </div>
         </div>

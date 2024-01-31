@@ -36,15 +36,11 @@ h6 {
 }
 
 .mediaoverlay {
-  background: linear-gradient(
-      37deg,
-      rgba(190, 147, 85, 0.7),
-      rgba(139, 99, 51, 0.3)
-    ),
-    url("../components/assets/images/media.jpg");
+  background: url("../components/assets/images/media.jpg");
   /* background-image: ; */
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: bottom;
   width: 100%;
   height: 350px;
 }
@@ -280,4 +276,40 @@ a {
     transform: translateY(0);
     opacity: 1;
   }
+}
+
+.bgCamera {
+  background-image: url("../components/assets/images/camera1.jpg");
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg1 {
+  background-image: url("../components/assets/images/bg.jpg");
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg2 {
+  background-image: url("../components/assets/images/bg2.jpg");
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg3 {
+  background-image: url("../components/assets/images/bg3.jpg");
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
